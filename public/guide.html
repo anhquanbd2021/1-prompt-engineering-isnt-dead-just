@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Control Surfaces Lab — Guide</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,600;1,600&family=Inter:wght@400..700&family=JetBrains+Mono:wght@400;500&display=swap">
+  <link rel="stylesheet" href="/styles.css">
+<!-- pb-shell --><link rel="stylesheet" href="./pb-shell.css"><!-- pb-shell --><!-- pb-back --><link rel="stylesheet" href="./pb-back.css"><!-- pb-back --></head>
+<body>
+  <header>
+    <h1>How the lab works</h1>
+    <p class="lede"><a href="/">← back to the lab</a></p>
+  </header>
+  <main>
+    <section>
+      <h2>The setup</h2>
+      <p>
+        Three era configs run the <em>same task</em> against the
+        <em>same deterministic scripted worker</em> (<code>public/model.mjs</code>).
+        Nothing about the model changes — the only variable is the
+        <strong>control surface</strong> each config exposes. That is the
+        article's claim made executable: at every era, the outcome difference
+        comes from the lever, not the intelligence.
+      </p>
+    </section>
+    <section>
+      <h2>The task</h2>
+      <p>
+        Prepare the v2.4 release. Ground truth (<code>public/pool.mjs</code>):
+      </p>
+      <ul>
+        <li><code>changelogFormatted</code> — the entry must follow
+          <code>changelog-spec</code>, reachable only if the spec survives
+          into the window.</li>
+        <li><code>versionBumped</code> — <code>VERSION</code> must become
+          2.4.0, reachable only through the <code>edit-file</code> tool.</li>
+        <li><code>checksGreen</code> — <code>run-checks</code> must actually
+          run and pass, which needs both VERSION <em>and</em> the release
+          channel fixed — a loop with a reason to continue.</li>
+      </ul>
+    </section>
+    <section>
+      <h2>The three control planes</h2>
+      <ul>
+        <li><strong>Era 1 — the words.</strong> Fixed-order admission: docs
+          enter in pool order, the first overflow cuts it and everything
+          after. An irrelevant doc eats the budget; the spec is scissored.
+          No tools, one turn, no verifier.</li>
+        <li><strong>Era 2 — what goes in.</strong> Curated admission inside a
+          budget; every selected doc is charged on every turn. Tools exist
+          and results return as raw history — but nobody engineered the
+          stop, so the worker declares done on its own say-so.</li>
+        <li><strong>Era 3 — the loop.</strong> Same window and tools, plus a
+          verifier (<code>checks.lastResult === "pass"</code>), an
+          attempt-log memory that decides what survives between turns, and a
+          turn budget. Termination is engineered, not felt.</li>
+      </ul>
+    </section>
+    <section>
+      <h2>Try it</h2>
+      <ul>
+        <li><code>npm start</code> — this UI on <code>:3000</code>.</li>
+        <li><code>npm run report</code> — the CLI side-by-side.</li>
+        <li><code>node scripts/report.mjs examples/configs/era-2-tight-budget.json</code>
+          — watch curation fail when the budget can't hold the spec.</li>
+        <li>Edit a config in <code>examples/configs/</code> and re-run —
+          <code>validateConfig</code> enforces the budget as a hard wall.</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>Zero dependencies · the model is scripted on purpose — the lever is the variable, not the intelligence.</p>
+  </footer>
+<!-- pb-shell --><a class="pb-shell" href="https://github.com/anhquanbd2021/1-prompt-engineering-isnt-dead-just" title="1-prompt-engineering-isnt-dead-just — an Article Playbook demo (view source)"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="2" y="2" width="9" height="9" rx="2" fill="#2dd4bf"/><rect x="13" y="2" width="9" height="9" rx="2" fill="#2dd4bf" opacity=".45"/><rect x="2" y="13" width="9" height="9" rx="2" fill="#2dd4bf" opacity=".45"/><rect x="13" y="13" width="9" height="9" rx="4.5" fill="#2dd4bf"/></svg><b>1-prompt-engineering-isnt-dead-just</b><i>DEMO</i></a><!-- pb-shell --><!-- pb-back --><a class="pb-back" id="pb-back" href="https://github.com/anhquanbd2021/1-prompt-engineering-isnt-dead-just" title="Back to the article — 1-prompt-engineering-isnt-dead-just">← Article <i>PLAYBOOK</i></a><script>(function(){var a=document.getElementById('pb-back');if(!a)return;var h=location.hostname;if(/^(localhost|127\.0\.0\.1|192\.168\.|10\.|172\.(1[6-9]|2[0-9]|3[01])\.)/.test(h)){a.href='//'+h+':'+(/^(localhost|127\.0\.0\.1)$/.test(h)?'1234':'30082')+'/microsites/article.html?slug=1-prompt-engineering-isnt-dead-just';}})();</script><!-- pb-back --></body>
+</html>

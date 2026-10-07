@@ -1,0 +1,16 @@
+{
+  "era": 3,
+  "name": "harness-engineering",
+  "control": "the loop",
+  "window": {
+    "capacity": 12,
+    "admission": "curated",
+    "selected": ["system-prompt", "user-request", "changelog-spec", "release-policy"]
+  },
+  "tools": ["edit-file", "run-checks"],
+  "verifier": {
+    "assertions": [{ "metric": "checks.lastResult", "op": "===", "value": "pass" }]
+  },
+  "memory": "attempt-log",
+  "maxTurns": 8
+}

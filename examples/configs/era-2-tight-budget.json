@@ -1,0 +1,14 @@
+{
+  "era": 2,
+  "name": "context-engineering (tight budget)",
+  "control": "what goes in",
+  "window": {
+    "capacity": 4,
+    "admission": "curated",
+    "selected": ["system-prompt", "user-request"]
+  },
+  "tools": ["edit-file", "run-checks"],
+  "verifier": null,
+  "memory": "raw-history",
+  "maxTurns": 6
+}

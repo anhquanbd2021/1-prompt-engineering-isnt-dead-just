@@ -1,0 +1,10 @@
+{
+  "era": 1,
+  "name": "prompt-engineering",
+  "control": "the words",
+  "window": { "capacity": 12, "admission": "fixed-order" },
+  "tools": [],
+  "verifier": null,
+  "memory": "none",
+  "maxTurns": 1
+}

@@ -1,0 +1,16 @@
+{
+  "name": "control-surfaces-lab",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Control Surfaces Lab — one task, one model, three era configs: what the prompt/context/harness lever can and cannot reach.",
+  "scripts": {
+    "start": "node app/server.js",
+    "report": "node scripts/report.mjs",
+    "test": "node --test \"test/*.test.mjs\"",
+    "check": "npm test && npm run report"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

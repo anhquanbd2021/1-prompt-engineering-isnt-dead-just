@@ -1,0 +1,14 @@
+{
+  "era": 2,
+  "name": "context-engineering",
+  "control": "what goes in",
+  "window": {
+    "capacity": 12,
+    "admission": "curated",
+    "selected": ["system-prompt", "user-request", "changelog-spec", "release-policy"]
+  },
+  "tools": ["edit-file", "run-checks"],
+  "verifier": null,
+  "memory": "raw-history",
+  "maxTurns": 6
+}

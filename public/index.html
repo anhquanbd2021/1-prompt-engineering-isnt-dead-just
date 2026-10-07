@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Control Surfaces Lab</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,600;1,600&family=Inter:wght@400..700&family=JetBrains+Mono:wght@400;500&display=swap">
+  <link rel="stylesheet" href="/styles.css">
+<!-- pb-shell --><link rel="stylesheet" href="./pb-shell.css"><!-- pb-shell --><!-- pb-back --><link rel="stylesheet" href="./pb-back.css"><!-- pb-back --></head>
+<body>
+  <header>
+    <h1>Control Surfaces Lab</h1>
+    <p class="lede">
+      One task. One scripted model. Three era configs — and the only thing that
+      changes is which lever you hold: <strong>the words</strong>,
+      <strong>what goes in</strong>, or <strong>the loop</strong>.
+    </p>
+    <p class="lede small">
+      Task: prepare the v2.4 release — formatted changelog entry, bumped
+      <code>VERSION</code>, checks green. <a href="/guide.html">How the lab works →</a>
+    </p>
+    <button id="run">Run all three eras</button>
+  </header>
+
+  <main id="app" hidden>
+    <section id="eras" class="era-grid"></section>
+
+    <section>
+      <h2>Requirement matrix</h2>
+      <table id="matrix">
+        <thead><tr><th>requirement</th><th>reachable by</th></tr></thead>
+        <tbody></tbody>
+      </table>
+    </section>
+
+    <section>
+      <h2>Lever → reach</h2>
+      <div id="levers" class="lever-grid"></div>
+    </section>
+
+    <section>
+      <h2>Turn-by-turn trace</h2>
+      <div id="trace"></div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Zero dependencies · the model is scripted on purpose — the lever is the variable, not the intelligence.</p>
+  </footer>
+  <script type="module" src="/app.js"></script>
+<!-- pb-shell --><a class="pb-shell" href="https://github.com/anhquanbd2021/1-prompt-engineering-isnt-dead-just" title="1-prompt-engineering-isnt-dead-just — an Article Playbook demo (view source)"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="2" y="2" width="9" height="9" rx="2" fill="#2dd4bf"/><rect x="13" y="2" width="9" height="9" rx="2" fill="#2dd4bf" opacity=".45"/><rect x="2" y="13" width="9" height="9" rx="2" fill="#2dd4bf" opacity=".45"/><rect x="13" y="13" width="9" height="9" rx="4.5" fill="#2dd4bf"/></svg><b>1-prompt-engineering-isnt-dead-just</b><i>DEMO</i></a><!-- pb-shell --><!-- pb-back --><a class="pb-back" id="pb-back" href="https://github.com/anhquanbd2021/1-prompt-engineering-isnt-dead-just" title="Back to the article — 1-prompt-engineering-isnt-dead-just">← Article <i>PLAYBOOK</i></a><script>(function(){var a=document.getElementById('pb-back');if(!a)return;var h=location.hostname;if(/^(localhost|127\.0\.0\.1|192\.168\.|10\.|172\.(1[6-9]|2[0-9]|3[01])\.)/.test(h)){a.href='//'+h+':'+(/^(localhost|127\.0\.0\.1)$/.test(h)?'1234':'30082')+'/microsites/article.html?slug=1-prompt-engineering-isnt-dead-just';}})();</script><!-- pb-back --></body>
+</html>
